@@ -1,0 +1,26 @@
+# /etc/conf.d/bitcoinnewd: config file for /etc/init.d/bitcoinnewd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/bitcoinnew/bitcoinnew.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/bitcoinnewd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bitcoinnewd.pid"
+
+# Where to write bitcoinnewd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/bitcoinnewd"
+
+# User and group to own bitcoinnewd process
+#BITCOIND_USER="bitcoinnew"
+#BITCOIND_GROUP="bitcoinnew"
+
+# Path to bitcoinnewd executable
+#BITCOIND_BIN="/usr/bin/bitcoinnewd"
+
+# Nice value to run bitcoinnewd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

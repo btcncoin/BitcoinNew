@@ -1,0 +1,26 @@
+[Unit]
+Description=BitcoinNew's distributed currency daemon
+After=network.target
+
+[Service]
+User=bitcoinnew
+Group=bitcoinnew
+
+Type=forking
+PIDFile=/var/lib/bitcoinnewd/bitcoinnewd.pid
+
+ExecStart=/usr/bin/bitcoinnewd -daemon -pid=/var/lib/bitcoinnewd/bitcoinnewd.pid \
+          -conf=/etc/bitcoinnew/bitcoinnew.conf -datadir=/var/lib/bitcoinnewd
+
+ExecStop=-/usr/bin/bitcoinnew-cli -conf=/etc/bitcoinnew/bitcoinnew.conf \
+         -datadir=/var/lib/bitcoinnewd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BitcoinNew
+Comment=BitcoinNew P2P Cryptocurrency
+Exec=bitcoinnew-qt %u
+Terminal=false
+Type=Application
+Icon=bitcoinnew128
+MimeType=x-scheme-handler/bitcoinnew;
+Categories=Office;Finance;
+Name[en_US]=bitcoinnew-qt.desktop
